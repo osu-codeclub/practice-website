@@ -1,0 +1,9 @@
+---
+title: "About me"
+---
+
+<img style="float: right;" src="img/fruit_veg_emoji.png" width="50%">
+
+This practice website was made by [Jessica Cooperstone](https://www.cooperstonelab.com/)
+
+

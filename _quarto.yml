@@ -1,0 +1,40 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  favicon: code-slash.png
+  navbar:
+    left:
+      # - href: index.qmd
+        # text: Make a website
+      - href: index.qmd
+        text: Make a website
+        icon: laptop
+      - href: about.qmd
+        text: About me
+        icon: file-person
+      - href: contact.qmd
+        text: Contact
+        icon: envelope
+    right:
+      - href: "https://osu-codeclub.github.io/"
+        icon: link
+      - href: "https://github.com/osu-codeclub"
+        icon: github
+    contents:
+      - index.qmd
+      - about.qmd
+      - contact.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    number-sections: true
+    title-block-banner: true
+    mainfont: Proxima Nova
+
+
+

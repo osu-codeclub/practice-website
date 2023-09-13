@@ -1,0 +1,23 @@
+---
+title: "A website."
+subtitle: "This is a practice website to help you learn how to make a website (so meta)."
+---
+
+This practice website was created to use as teaching materials for Ohio State University's [Code Club](https://osu-codeclub.github.io/).
+
+The basics steps for creating a website are:
+
+# Initiate a Quarto website in RStudio
+
+You can learn how to initiate a new Quarto website [here](https://osu-codeclub.github.io/posts/website_01_initiation/).
+
+# Add new pages
+
+You can learn how to add new pages [here](https://osu-codeclub.github.io/posts/website_02/#adding-a-new-page-to-your-site).
+
+# Customize your YAML
+
+You can learn how to customize your YAML [here](https://osu-codeclub.github.io/posts/website_02/#modifying-the-yaml-header-of-our-new-page).
+
+# Deploy using Github
+
