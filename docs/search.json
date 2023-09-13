@@ -19,5 +19,12 @@
     "title": "A website.",
     "section": "",
     "text": "This practice website was created to use as teaching materials for Ohio State University’s Code Club.\nThe basics steps for creating a website are:\n\n1 Initiate a Quarto website in RStudio\nYou can learn how to initiate a new Quarto website here.\n\n\n2 Add new pages\nYou can learn how to add new pages here.\n\n\n3 Customize your YAML\nYou can learn how to customize your YAML here.\n\n\n4 Deploy using Github"
+  },
+  {
+    "objectID": "readme.html",
+    "href": "readme.html",
+    "title": "",
+    "section": "",
+    "text": "This is a practice website to learn how to make a website (so meta) as part of OSU’s Code Club. https://osu-codeclub.github.io/practice-website"
   }
 ]
