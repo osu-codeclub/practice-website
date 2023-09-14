@@ -1,5 +1,5 @@
 ---
-title: "A website."
+title: "A website 👋"
 subtitle: "This is a practice website to help you learn how to make a website (so meta)."
 ---
 
@@ -19,5 +19,6 @@ You can learn how to add new pages [here](https://osu-codeclub.github.io/posts/w
 
 You can learn how to customize your YAML [here](https://osu-codeclub.github.io/posts/website_02/#modifying-the-yaml-header-of-our-new-page).
 
-# Deploy using Github
+# Deploy using GitHub
 
+You can learn how to deploy your website using GitHub, GitHub Pages, and GitHub Desktop [here](https://osu-codeclub.github.io/posts/website_03_deploy-github/).

@@ -7,6 +7,13 @@
     "text": "This practice website was made by Jessica Cooperstone"
   },
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "A website 👋",
+    "section": "",
+    "text": "This practice website was created to use as teaching materials for Ohio State University’s Code Club.\nThe basics steps for creating a website are:\n\n1 Initiate a Quarto website in RStudio\nYou can learn how to initiate a new Quarto website here.\n\n\n2 Add new pages\nYou can learn how to add new pages here.\n\n\n3 Customize your YAML\nYou can learn how to customize your YAML here.\n\n\n4 Deploy using GitHub\nYou can learn how to deploy your website using GitHub, GitHub Pages, and GitHub Desktop here."
+  },
+  {
     "objectID": "contact.html",
     "href": "contact.html",
     "title": "Contact",
@@ -14,17 +21,10 @@
     "text": "You can find me at Code Club 😃"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "A website.",
-    "section": "",
-    "text": "This practice website was created to use as teaching materials for Ohio State University’s Code Club.\nThe basics steps for creating a website are:\n\n1 Initiate a Quarto website in RStudio\nYou can learn how to initiate a new Quarto website here.\n\n\n2 Add new pages\nYou can learn how to add new pages here.\n\n\n3 Customize your YAML\nYou can learn how to customize your YAML here.\n\n\n4 Deploy using Github"
-  },
-  {
     "objectID": "readme.html",
     "href": "readme.html",
-    "title": "",
+    "title": "1 This is a practice website to learn how to make a website (so meta) as part of OSU’s Code Club.",
     "section": "",
-    "text": "This is a practice website to learn how to make a website (so meta) as part of OSU’s Code Club. https://osu-codeclub.github.io/practice-website"
+    "text": "1 This is a practice website to learn how to make a website (so meta) as part of OSU’s Code Club.\nOSU Code Club: https://osu-codeclub.github.io\nOSU Code Club practice website: https://osu-codeclub.github.io/practice-website"
   }
 ]
