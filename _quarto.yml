@@ -3,11 +3,11 @@ project:
   output-dir: docs
 
 website:
+  repo-url: https://github.com/osu-codeclub/practice-website
+  repo-actions: [edit, issue]
   favicon: code-slash.png
   navbar:
     left:
-      # - href: index.qmd
-        # text: Make a website
       - href: index.qmd
         text: Make a website
         icon: laptop
