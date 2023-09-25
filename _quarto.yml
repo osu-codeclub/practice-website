@@ -18,9 +18,7 @@ website:
         text: Contact
         icon: envelope
     right:
-      - href: "https://osu-codeclub.github.io/"
-        icon: link
-      - href: "https://github.com/osu-codeclub"
+      - href: "https://github.com/osu-codeclub/practice-website"
         icon: github
     contents:
       - index.qmd
