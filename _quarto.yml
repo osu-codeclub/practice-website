@@ -3,8 +3,6 @@ project:
   output-dir: docs
 
 website:
-  repo-url: https://github.com/osu-codeclub/practice-website
-  repo-actions: [edit, issue]
   favicon: code-slash.png
   navbar:
     left:
@@ -17,9 +15,6 @@ website:
       - href: contact.qmd
         text: Contact
         icon: envelope
-    right:
-      - href: "https://github.com/osu-codeclub/practice-website"
-        icon: github
     contents:
       - index.qmd
       - about.qmd
@@ -33,6 +28,3 @@ format:
     number-sections: true
     title-block-banner: true
     mainfont: Proxima Nova
-
-
-
