@@ -22,3 +22,11 @@ You can learn how to customize your YAML [here](https://osu-codeclub.github.io/p
 # Deploy using GitHub
 
 You can learn how to deploy your website using GitHub, GitHub Pages, and GitHub Desktop [here](https://osu-codeclub.github.io/posts/website_03_deploy-github/).
+
+# Interact with your GitHub repo
+
+You can learn how to change the URL for your website, add About and description on GitHub, and push your changes online, [here](https://osu-codeclub.github.io/posts/website_04/).
+
+# Alter your website styling
+
+You can learn how to make a fancy about page, add drop down headers, and change the styling of your site [here](https://osu-codeclub.github.io/posts/website_05/).

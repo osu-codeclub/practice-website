@@ -10,7 +10,7 @@ website:
         text: Make a website
         icon: laptop
       - href: about.qmd
-        text: About me
+        text: About us
         icon: file-person
       - href: contact.qmd
         text: Contact
@@ -22,8 +22,9 @@ website:
 
 format:
   html:
-    theme: flatly
-    css: styles.css
+    theme: 
+      light: [flatly, flatly.scss]
+      dark: [darkly]
     toc: true
     number-sections: true
     title-block-banner: true

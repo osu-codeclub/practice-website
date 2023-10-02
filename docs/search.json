@@ -2,9 +2,9 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About me",
+    "title": "About us",
     "section": "",
-    "text": "This practice website was made by Jessica Cooperstone"
+    "text": "This practice website for OSU’s Code Club was made by us."
   },
   {
     "objectID": "contact.html",
@@ -18,6 +18,6 @@
     "href": "index.html",
     "title": "A website 👋",
     "section": "",
-    "text": "This practice website was created to use as teaching materials for Ohio State University’s Code Club.\nThe basics steps for creating a website are:\n\n1 Initiate a Quarto website in RStudio\nYou can learn how to initiate a new Quarto website here.\n\n\n2 Add new pages\nYou can learn how to add new pages here.\n\n\n3 Customize your YAML\nYou can learn how to customize your YAML here.\n\n\n4 Deploy using GitHub\nYou can learn how to deploy your website using GitHub, GitHub Pages, and GitHub Desktop here."
+    "text": "This practice website was created to use as teaching materials for Ohio State University’s Code Club.\nThe basics steps for creating a website are:\n\n1 Initiate a Quarto website in RStudio\nYou can learn how to initiate a new Quarto website here.\n\n\n2 Add new pages\nYou can learn how to add new pages here.\n\n\n3 Customize your YAML\nYou can learn how to customize your YAML here.\n\n\n4 Deploy using GitHub\nYou can learn how to deploy your website using GitHub, GitHub Pages, and GitHub Desktop here.\n\n\n5 Interact with your GitHub repo\nYou can learn how to change the URL for your website, add About and description on GitHub, and push your changes online, here.\n\n\n6 Alter your website styling\nYou can learn how to make a fancy about page, add drop down headers, and change the styling of your site here."
   }
 ]

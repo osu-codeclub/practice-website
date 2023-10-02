@@ -1,9 +1,11 @@
 ---
-title: "About me"
+title: "About us"
+about:
+  template: jolla
+  image: img/grin.png
 ---
 
-<img style="float: right;" src="img/fruit_veg_emoji.png" width="50%">
 
-This practice website was made by [Jessica Cooperstone](https://www.cooperstonelab.com/)
+This practice website for [OSU's Code Club](https://osu-codeclub.github.io/) was made by [us](https://osu-codeclub.github.io/about.html).
 
 
