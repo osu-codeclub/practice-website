@@ -5,6 +5,7 @@ project:
 website:
   favicon: code-slash.png
   navbar:
+    background: "#06280C" # foresty green
     left:
       - href: index.qmd
         text: Make a website
@@ -15,6 +16,14 @@ website:
       - href: contact.qmd
         text: Contact
         icon: envelope
+      - text: New here?
+        menu:
+        - text: Computer setup for Code Club
+          href: pages/setup.qmd
+        - text: R resources for beginners
+          href: pages/r_resources.qmd
+        - text: Sign up!
+          href: https://forms.gle/eYkMvmJShrcANUrt5        
     contents:
       - index.qmd
       - about.qmd
@@ -22,10 +31,15 @@ website:
 
 format:
   html:
-    theme: 
-      light: [flatly, flatly.scss]
-      dark: [darkly]
+    theme: flatly
+      # light: [flatly, flatly.scss]
+      # dark: [darkly]
     toc: true
     number-sections: true
-    title-block-banner: true
     mainfont: Proxima Nova
+    backgroundcolor: "#CFDAD3" # light grey
+    monobackgroundcolor: "#CFDAD3" # light grey
+    title-block-banner: "#06280C" # foresty green
+    title-block-banner-color: "#CFDAD3" # light grey
+    fontcolor: "#06280C" # foresty green
+    linkcolor: "#0E11E2" # hyperlink blue
