@@ -1,5 +1,83 @@
 ---
-title: "My practice presentation"
-format: revealjs
+format: 
+  revealjs:
+    slide-number: true
+    logo: "code-slash.png"
+    footer: "I ❤️ [Code Club](https://osu-codeclub.github.io/)"
+    theme: moon
+    echo: true
+    chalkboard: true
 ---
 
+## My title slide
+
+![](img/grin.png){fig-align="right"}
+
+## The title of my second slide
+
+::: incremental
+-   The first item in my list
+-   A second item in my list
+:::
+
+## Plotting some 🐧
+
+```{r}
+#| output-location: slide
+library(tidyverse)
+library(palmerpenguins)
+
+penguins %>%
+  ggplot(aes(x = species, y = flipper_length_mm, color = species)) +
+  geom_boxplot() +
+  geom_jitter() + 
+  theme_minimal() +
+  theme(legend.position = "none") +
+  labs(x = "Penguin species",
+       y = "Flipper length, in mm",
+       title = "Penguin flipper length by species")
+```
+
+## Plotting some 🐧 again
+
+```{r}
+#| output-location: column-fragment
+penguins %>%
+  ggplot(aes(x = species, y = flipper_length_mm, color = species)) +
+  geom_boxplot() +
+  geom_jitter() + 
+  theme_minimal() +
+  theme(legend.position = "none") +
+  labs(x = "Penguin species",
+       y = "Flipper length, in mm",
+       title = "Penguin flipper length by species")
+```
+
+## Plotting some 🐧 but hide/fold the code
+
+```{r}
+#| code-fold: true
+#| code-summary: "Click for the full code"
+penguins %>%
+  ggplot(aes(x = species, y = flipper_length_mm, color = species)) +
+  geom_boxplot() +
+  geom_jitter() + 
+  theme_minimal() +
+  theme(legend.position = "none") +
+  labs(x = "Penguin species",
+       y = "Flipper length, in mm",
+       title = "Penguin flipper length by species")
+```
+
+## Incrementing
+
+content before the pause\
+second bit of content before the pause
+
+. . .
+
+content after the pause
+
+## This is a level 2 header {.incremental style="color: red"}
+
+![I am smiling](img/fruit_veg_emoji.png){fig-align="center"}

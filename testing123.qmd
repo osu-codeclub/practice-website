@@ -1,0 +1,5 @@
+---
+title: "Practicing again"
+format: revealjs
+editor: visual
+---

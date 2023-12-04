@@ -1,10 +1,80 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About us",
+    "objectID": "shiny-practice.html",
+    "href": "shiny-practice.html",
+    "title": "My practice shiny deployment",
     "section": "",
-    "text": "This practice website for OSU’s Code Club was made by us."
+    "text": "#| standalone: true\n#| viewerHeight: 600\n\nlibrary(shiny)\n\n# Define UI for app that draws a histogram ----\nui &lt;- fluidPage(\n\n  # App title ----\n  titlePanel(\"Hello Shiny!\"),\n\n  # Sidebar layout with input and output definitions ----\n  sidebarLayout(\n\n    # Sidebar panel for inputs ----\n    sidebarPanel(\n\n      # Input: Slider for the number of bins ----\n      sliderInput(inputId = \"bins\",\n                  label = \"Number of bins:\",\n                  min = 1,\n                  max = 50,\n                  value = 30)\n\n    ),\n\n    # Main panel for displaying outputs ----\n    mainPanel(\n\n      # Output: Histogram ----\n      plotOutput(outputId = \"distPlot\")\n\n    )\n  )\n)\n\n# Define server logic required to draw a histogram ----\nserver &lt;- function(input, output) {\n\n  # Histogram of the Old Faithful Geyser Data ----\n  # with requested number of bins\n  # This expression that generates a histogram is wrapped in a call\n  # to renderPlot to indicate that:\n  #\n  # 1. It is \"reactive\" and therefore should be automatically\n  #    re-executed when inputs (input$bins) change\n  # 2. Its output type is a plot\n  output$distPlot &lt;- renderPlot({\n\n    x    &lt;- faithful$waiting\n    bins &lt;- seq(min(x), max(x), length.out = input$bins + 1)\n\n    hist(x, breaks = bins, col = \"#75AADB\", border = \"white\",\n         xlab = \"Waiting time to next eruption (in mins)\",\n         main = \"Histogram of waiting times\")\n\n    })\n\n}\n\n# Create Shiny app ----\nshinyApp(ui = ui, server = server)"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "A website 👋",
+    "section": "",
+    "text": "This practice website was created to use as teaching materials for Ohio State University’s Code Club.\nThe basics steps for creating a website are:\n\n1 Initiate a Quarto website in RStudio\nYou can learn how to initiate a new Quarto website here.\n\n\n2 Add new pages\nYou can learn how to add new pages here.\n\n\n3 Customize your YAML\nYou can learn how to customize your YAML here.\n\n\n4 Deploy using GitHub\nYou can learn how to deploy your website using GitHub, GitHub Pages, and GitHub Desktop here.\n\n\n5 Interact with your GitHub repo\nYou can learn how to change the URL for your website, add About and description on GitHub, and push your changes online, here.\n\n\n6 Alter your website styling\nYou can learn how to make a fancy about page, add drop down headers, and change the styling of your site here."
+  },
+  {
+    "objectID": "practice-presentation.html#my-title-slide",
+    "href": "practice-presentation.html#my-title-slide",
+    "title": "",
+    "section": "My title slide",
+    "text": "My title slide"
+  },
+  {
+    "objectID": "practice-presentation.html#the-title-of-my-second-slide",
+    "href": "practice-presentation.html#the-title-of-my-second-slide",
+    "title": "",
+    "section": "The title of my second slide",
+    "text": "The title of my second slide\n\n\nThe first item in my list\nA second item in my list"
+  },
+  {
+    "objectID": "practice-presentation.html#plotting-some",
+    "href": "practice-presentation.html#plotting-some",
+    "title": "",
+    "section": "Plotting some 🐧",
+    "text": "Plotting some 🐧\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\n\npenguins %&gt;%\n  ggplot(aes(x = species, y = flipper_length_mm, color = species)) +\n  geom_boxplot() +\n  geom_jitter() + \n  theme_minimal() +\n  theme(legend.position = \"none\") +\n  labs(x = \"Penguin species\",\n       y = \"Flipper length, in mm\",\n       title = \"Penguin flipper length by species\")"
+  },
+  {
+    "objectID": "practice-presentation.html#plotting-some-output",
+    "href": "practice-presentation.html#plotting-some-output",
+    "title": "",
+    "section": "Plotting some 🐧",
+    "text": "Plotting some 🐧"
+  },
+  {
+    "objectID": "practice-presentation.html#plotting-some-again",
+    "href": "practice-presentation.html#plotting-some-again",
+    "title": "",
+    "section": "Plotting some 🐧 again",
+    "text": "Plotting some 🐧 again\n\n\npenguins %&gt;%\n  ggplot(aes(x = species, y = flipper_length_mm, color = species)) +\n  geom_boxplot() +\n  geom_jitter() + \n  theme_minimal() +\n  theme(legend.position = \"none\") +\n  labs(x = \"Penguin species\",\n       y = \"Flipper length, in mm\",\n       title = \"Penguin flipper length by species\")"
+  },
+  {
+    "objectID": "practice-presentation.html#plotting-some-but-hidefold-the-code",
+    "href": "practice-presentation.html#plotting-some-but-hidefold-the-code",
+    "title": "",
+    "section": "Plotting some 🐧 but hide/fold the code",
+    "text": "Plotting some 🐧 but hide/fold the code\n\n\nClick for the full code\npenguins %&gt;%\n  ggplot(aes(x = species, y = flipper_length_mm, color = species)) +\n  geom_boxplot() +\n  geom_jitter() + \n  theme_minimal() +\n  theme(legend.position = \"none\") +\n  labs(x = \"Penguin species\",\n       y = \"Flipper length, in mm\",\n       title = \"Penguin flipper length by species\")"
+  },
+  {
+    "objectID": "practice-presentation.html#incrementing",
+    "href": "practice-presentation.html#incrementing",
+    "title": "",
+    "section": "Incrementing",
+    "text": "Incrementing\ncontent before the pause\nsecond bit of content before the pause\n\ncontent after the pause"
+  },
+  {
+    "objectID": "practice-presentation.html#this-is-a-level-2-header",
+    "href": "practice-presentation.html#this-is-a-level-2-header",
+    "title": "",
+    "section": "This is a level 2 header",
+    "text": "This is a level 2 header\n\n\n\nI am smiling\n\n\n\n\n\nI ❤️ Code Club"
+  },
+  {
+    "objectID": "shiny-test.html",
+    "href": "shiny-test.html",
+    "title": "Old Faithful",
+    "section": "",
+    "text": "Data on eruptions of the Old Faithful geyser in Yellowstone National Park, Wyoming, USA. The data was collected continuously from August 1st until August 15th, 1985.\n\n\n\nNumber of bins:\n\n\n\n\n\n\n\nThe data consists of 299 pairs of measurements, referring to the time interval between the starts of successive eruptions and the duration of the subsequent eruption.\nClick the Code button above to see the source code for this example."
   },
   {
     "objectID": "contact.html",
@@ -14,10 +84,10 @@
     "text": "You can find me at Code Club 😃"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "A website 👋",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About us",
     "section": "",
-    "text": "This practice website was created to use as teaching materials for Ohio State University’s Code Club.\nThe basics steps for creating a website are:\n\n1 Initiate a Quarto website in RStudio\nYou can learn how to initiate a new Quarto website here.\n\n\n2 Add new pages\nYou can learn how to add new pages here.\n\n\n3 Customize your YAML\nYou can learn how to customize your YAML here.\n\n\n4 Deploy using GitHub\nYou can learn how to deploy your website using GitHub, GitHub Pages, and GitHub Desktop here.\n\n\n5 Interact with your GitHub repo\nYou can learn how to change the URL for your website, add About and description on GitHub, and push your changes online, here.\n\n\n6 Alter your website styling\nYou can learn how to make a fancy about page, add drop down headers, and change the styling of your site here."
+    "text": "This practice website for OSU’s Code Club was made by us."
   }
 ]

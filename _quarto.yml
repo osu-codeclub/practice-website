@@ -16,6 +16,8 @@ website:
       - href: contact.qmd
         text: Contact
         icon: envelope
+      - href: shiny-practice.qmd
+        text: My shiny practice app
       - text: New here?
         menu:
         - text: Computer setup for Code Club
