@@ -30,3 +30,7 @@ You can learn how to change the URL for your website, add About and description 
 # Alter your website styling
 
 You can learn how to make a fancy about page, add drop down headers, and change the styling of your site [here](https://osu-codeclub.github.io/posts/website_05/).
+
+# Make a Quarto presentation
+
+You can learn how to make a Quarto presentaation [here](https://osu-codeclub.github.io/posts/website_07_presentation/).

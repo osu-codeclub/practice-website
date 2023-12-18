@@ -7,11 +7,25 @@
     "text": "#| standalone: true\n#| viewerHeight: 600\n\nlibrary(shiny)\n\n# Define UI for app that draws a histogram ----\nui &lt;- fluidPage(\n\n  # App title ----\n  titlePanel(\"Hello Shiny!\"),\n\n  # Sidebar layout with input and output definitions ----\n  sidebarLayout(\n\n    # Sidebar panel for inputs ----\n    sidebarPanel(\n\n      # Input: Slider for the number of bins ----\n      sliderInput(inputId = \"bins\",\n                  label = \"Number of bins:\",\n                  min = 1,\n                  max = 50,\n                  value = 30)\n\n    ),\n\n    # Main panel for displaying outputs ----\n    mainPanel(\n\n      # Output: Histogram ----\n      plotOutput(outputId = \"distPlot\")\n\n    )\n  )\n)\n\n# Define server logic required to draw a histogram ----\nserver &lt;- function(input, output) {\n\n  # Histogram of the Old Faithful Geyser Data ----\n  # with requested number of bins\n  # This expression that generates a histogram is wrapped in a call\n  # to renderPlot to indicate that:\n  #\n  # 1. It is \"reactive\" and therefore should be automatically\n  #    re-executed when inputs (input$bins) change\n  # 2. Its output type is a plot\n  output$distPlot &lt;- renderPlot({\n\n    x    &lt;- faithful$waiting\n    bins &lt;- seq(min(x), max(x), length.out = input$bins + 1)\n\n    hist(x, breaks = bins, col = \"#75AADB\", border = \"white\",\n         xlab = \"Waiting time to next eruption (in mins)\",\n         main = \"Histogram of waiting times\")\n\n    })\n\n}\n\n# Create Shiny app ----\nshinyApp(ui = ui, server = server)"
   },
   {
+    "objectID": "pages/r_resources.html#new-to-r",
+    "href": "pages/r_resources.html#new-to-r",
+    "title": "Getting Started with R",
+    "section": "1 New to R?",
+    "text": "1 New to R?\nIf you are completely new to R, we recommend watching at least the first couple of videos from OSU’s Mike Sovic’s Youtube playlist of short videos on R, to get started.\nHere are some additional resources for learning the basics of R:\n\nA useful and fun written tutorial is R for cats.\nFor a more systematic and lengthy introduction to R, see A Tutorial Introduction to R (this gets fairly advanced after section 9).\nExcellent comprehensive introductions are the R Basics and Visualization classes by Rafael Irizarry that can be freely accessed; you do have to create an account.\nOSU TDAI videos:\n\nInstalling R / R Studio\nR / R Studio Introduction\n\n\nAlso, don’t hesitate to reach out to the Code Club organizers if you have any questions!"
+  },
+  {
+    "objectID": "pages/r_resources.html#miscellaneous-r-tips",
+    "href": "pages/r_resources.html#miscellaneous-r-tips",
+    "title": "Getting Started with R",
+    "section": "2 Miscellaneous R tips",
+    "text": "2 Miscellaneous R tips\n\n2.1 Useful settings\nBy default, R will try to save your “environment” (e.g., your loaded data, variables, etc) when you exit, and then reload everything the way it was upon restarting R. However, this is bad! You should always be able to reproduce your environment given a set of commands saved in an R script or R Markdown document, whereas saving and reloading your environment encourages you to be sloppy about this.\nTo disable this in RStudio, go to Tools &gt; Global Options &gt; General and set the options as follows:\n\n\n\n\n2.2 Installing R packages\n\n2.2.1 CRAN packages\nTo install an R package that is available at CRAN, the default R package repository, from within R (e.g. in the R console in RStudio), use the install.packages() function.\nThe install.packages() function will handle dependencies within R — i.e., it will install other R packages that your package depends on. Occasionally, when the install function needs to compile a package from source, errors arise that relate to missing system dependencies (i.e. software outside of R).\nOn Mac and Linux, these system dependencies are best installed outside of R, such as with homebrew on Mac or apt on Ubuntu. The errror message you got when trying to install an R package should tell you which system dependencies are needed.\nOn Windows, you can use the installr package to install such dependencies or other software from within R — for example:\ninstall.packages(\"installr\")    # Install the installr package first\ninstalllr::install.RStudio()    # Install RStudio\ninstallr::install.python()      # Install Python\n\n\n2.2.2 Installing packages from Github\nTo install a package from Github, use either the devtools or the remotes package – for example:\ninstall.packages(\"remotes\")                # Install the remotes package\nremotes::install_github(\"kbroman/broman\")  # Install from a repository using \"&lt;username&gt;/&lt;repo-name&gt;\"\nThis will install the package from source, so you will need to make sure you are able to do so by following the instructions in the section right above this one.\n\n\n2.2.3 Installing packages from Bioconductor\nIf you’re doing bioinformatic analyses in R, you will probably run into packages that are not on CRAN but on Bioconductor. To install a package from Bioconductor, use the BiocManager package – for example:\ninstall.packages(\"BiocManager\")  # Install the BiocManager package\nBiocManager::install(\"edgeR\")    # Install the edgeR package from Bioconductor\n\n\n\n\n2.3 Updating R\nConsider updating R if you have an older version of R installed. As of August 2023, we would recommend to update R if your version is below 4.1.\nYou can check which version of R you have by looking at the first lines of output when running the following command inside R:\nsessionInfo()\nTo update:\n\nWindows: You can update R from within R. The updateR() function will also take care of updating your packages:\ninstall.packages(\"installr\")\ninstallr::updateR()\nMac: Download and install the latest .pkg file as if you were installing it for the first time.\n\n\n\n2.3.1 Re-installing your packages after updating (Mac and Linux)\nWhile the installr::updateR() function for Windows users takes care of reinstalling your packages along with updating R, Mac and Linux users will have to manually re-install their packages. Some people prefer to re-install these packages on the fly, which can end up being a way to get rid of packages you no longer use.\nBut if you want immediately reinstall all your packages, run this before you upgrade:\nmy_packages &lt;- installed.packages()\nsaveRDS(my_packages, \"my_packages.rds\")\nThen, after you’ve installed the latest R version:\nmy_packages &lt;- readRDS(\"CurrentPackages.rds\")\ninstall.packages(my_packages[1, ])\nThis will only work for packages available on CRAN. Of course, you can check your list for Github-only and Bioconductor packages and then install those with their respective commands (see below). Yes, this can be a bit of a hassle!"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "A website 👋",
     "section": "",
-    "text": "This practice website was created to use as teaching materials for Ohio State University’s Code Club.\nThe basics steps for creating a website are:\n\n1 Initiate a Quarto website in RStudio\nYou can learn how to initiate a new Quarto website here.\n\n\n2 Add new pages\nYou can learn how to add new pages here.\n\n\n3 Customize your YAML\nYou can learn how to customize your YAML here.\n\n\n4 Deploy using GitHub\nYou can learn how to deploy your website using GitHub, GitHub Pages, and GitHub Desktop here.\n\n\n5 Interact with your GitHub repo\nYou can learn how to change the URL for your website, add About and description on GitHub, and push your changes online, here.\n\n\n6 Alter your website styling\nYou can learn how to make a fancy about page, add drop down headers, and change the styling of your site here."
+    "text": "This practice website was created to use as teaching materials for Ohio State University’s Code Club.\nThe basics steps for creating a website are:\n\n1 Initiate a Quarto website in RStudio\nYou can learn how to initiate a new Quarto website here.\n\n\n2 Add new pages\nYou can learn how to add new pages here.\n\n\n3 Customize your YAML\nYou can learn how to customize your YAML here.\n\n\n4 Deploy using GitHub\nYou can learn how to deploy your website using GitHub, GitHub Pages, and GitHub Desktop here.\n\n\n5 Interact with your GitHub repo\nYou can learn how to change the URL for your website, add About and description on GitHub, and push your changes online, here.\n\n\n6 Alter your website styling\nYou can learn how to make a fancy about page, add drop down headers, and change the styling of your site here.\n\n\n7 Make a Quarto presentation\nYou can learn how to make a Quarto presentaation here."
   },
   {
     "objectID": "practice-presentation.html#my-title-slide",
@@ -89,5 +103,47 @@
     "title": "About us",
     "section": "",
     "text": "This practice website for OSU’s Code Club was made by us."
+  },
+  {
+    "objectID": "pages/setup.html",
+    "href": "pages/setup.html",
+    "title": "Computer Setup for Code Club",
+    "section": "",
+    "text": "Here, you will find general information about computer setup for Code Club. Additional setup instructions for individual sessions will appear in the posts for each session.\nIn summary, you just need to get access to R and RStudio, preferably via a local installation, and optionally via the Ohio Supercomputer Center (OSC).\nIf you run into issues or have questions, don’t hesitate to contact one of the organizers. You can also come to Code Club 15 minutes early, and one or more of the organizers should be there already."
+  },
+  {
+    "objectID": "pages/setup.html#install-r",
+    "href": "pages/setup.html#install-r",
+    "title": "Computer Setup for Code Club",
+    "section": "1 Install R",
+    "text": "1 Install R\n\nWindows: Download and run the .exe file for the latest version of R from https://cran.r-project.org/bin/windows/base/, by clicking the large Download R [version-number] for Windows link at the top of the gray box.\nMac: Download and run the .pkg file for the latest version of R from https://cran.r-project.org/bin/macosx/, by clicking the link just below Latest release.\n\n\n\n\n\n\n\nAlready have R installed?\n\n\n\n\nPlease check your version of R – this information is printed to the console when you start R, and you can also get it by typing sessionInfo() and checking the first line of the output.\nCurrently (August 2023), we would recommend R version 4.2.0 or higher. And since we’ll work with the “base R pipe”, you’ll definitely need version 4.1.0 or higher.\nTo update R, see this page for instructions."
+  },
+  {
+    "objectID": "pages/setup.html#install-rstudio",
+    "href": "pages/setup.html#install-rstudio",
+    "title": "Computer Setup for Code Club",
+    "section": "2 Install RStudio",
+    "text": "2 Install RStudio\nRStudio is a so-called Integrated Development Environment (IDE) for R, with side-by-side panes for an R script, an R concole, plots, help documents, and much more. While it is perfectly possible to use R without RStudio, RStudio has become the de facto standard for working with R and is very useful.\nTo install RStudio, go to the RStudio download page and download and run the installer file for your operating system."
+  },
+  {
+    "objectID": "pages/setup.html#quarto-website-specific-installation",
+    "href": "pages/setup.html#quarto-website-specific-installation",
+    "title": "Computer Setup for Code Club",
+    "section": "3 Quarto-website specific installation",
+    "text": "3 Quarto-website specific installation\nFor the Fall 2023 sessions on creating a Quarto website, you will need to have the rmarkdown R package installed. You can do so by typing (or copying) the following into your R Console inside RStudio:\n\ninstall.packages(\"rmarkdown\")\n\nWhile not necessary for basic website building inside RStudio, it will also be a good idea to install Quarto itself. This is not an R package, but is a separate piece of software. To install it, go to https://quarto.org/docs/get-started/ and the correct installer for your operating system should be highlighted in a blue box. Click on that box to download and once downloaded, click on the installer to install Quarto."
+  },
+  {
+    "objectID": "pages/setup.html#osc",
+    "href": "pages/setup.html#osc",
+    "title": "Computer Setup for Code Club",
+    "section": "4 Alternative: Use RStudio Server at OSC",
+    "text": "4 Alternative: Use RStudio Server at OSC\nUpon request (contact Jelmer), you can get access to the Ohio Supercomputer Center (OSC) Classroom Project for Code Club (PAS1838). This way, you can code in RStudio from your browser rather than with a local installation. This is a good option if you prefer not to install anything or if you run into problems during installations.\nAfter you asked for access to the OSC project, you should receive an email from OSC that you have been added to the Code Club OSC project.\n\nIf you already have an OSC account, you shouldn’t need to do anything to gain access, although the email may ask you to confirm/accept your being added to project.\nIf you do not yet have an OSC account, the email you received from OSC should have a link to do so. Alternatively, follow the instructions below to sign up and get access to the project.\n\n\n\n\n\n\n\nRun RStudio Server from the OSC OnDemand website (Click to expand)\n\n\n\n\n\nOSC OnDemand lets you access OSC resources through your browser and run applications like RStudio.\n\nTo get started, go to https://ondemand.osc.edu/ and log in with your OSC username and password.\nClick on “Interactive Apps” in the blue top bar, and select “RStudio Server” (near the bottom).\nNow, you’re on a page from which you can launch an RStudio server that will run on an OSC cluster. Select project PAS1838 in the dropdown menu and change the “Number of hours” to 2. Then click “Launch”.\nYou will be sent to a page where you can see the status of your “job” It usually starts running within seconds, and the color of the top bar will then switch from blue (“Queued” and then “Starting”) to green (“Running”).\nClick “Connect to RStudio Server” at the bottom of the box, and an RStudio Server instance will open."
+  },
+  {
+    "objectID": "pages/setup.html#more",
+    "href": "pages/setup.html#more",
+    "title": "Computer Setup for Code Club",
+    "section": "5 More info",
+    "text": "5 More info\nPlease see our R Resources and Tips if you are new to R or need to update your R version!"
   }
 ]
